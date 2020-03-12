@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray">
+
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/toolbar_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bookDetails_cl_up"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dim_8dp"
+            app:cardCornerRadius="@dimen/dim_16dp"
+            app:cardElevation="@dimen/dim_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/dim_150dp"
+                android:layout_height="200dp"
+                android:background="@drawable/post_img_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/bookDetails_tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_marginBottom="@dimen/dim_8dp"
+            android:text="@string/data_structure_and_algorithms"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/bookDetails_tv_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:text="@string/_15_00"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintStart_toEndOf="@+id/guideline_center"
+            app:layout_constraintTop_toBottomOf="@+id/bookDetails_tv_name" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <View
+            android:layout_width="@dimen/dim_2dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dim_8dp"
+            android:background="@color/colorGray"
+            app:layout_constraintBottom_toTopOf="@+id/bookDetails_rb_ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/bookDetails_tv_arthurName"
+            app:layout_constraintTop_toBottomOf="@id/bookDetails_tv_name" />
+
+
+        <TextView
+            android:id="@+id/bookDetails_tv_arthurName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:text="@string/john_doe"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_center"
+            app:layout_constraintTop_toBottomOf="@id/bookDetails_tv_name" />
+
+        <RatingBar
+            android:id="@+id/bookDetails_rb_ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:progressTint="@color/colorOrange"
+            android:rating="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookDetails_tv_arthurName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bookDetails_cl_down"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dim_8dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@+id/bookDetails_btn_placeOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookDetails_cl_up">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".05" />
+
+        <View
+            android:layout_width="@dimen/dim_6dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dim_40dp"
+            android:background="@color/colorOrange"
+            app:layout_constraintBottom_toBottomOf="@+id/bookDetails_tv_bookInformation"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_in"
+            app:layout_constraintTop_toTopOf="@id/bookDetails_tv_bookInformation" />
+
+        <TextView
+            android:id="@+id/bookDetails_tv_bookInformation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_8dp"
+            android:text="@string/book_information"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_in"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/bookDetails_tv_describeInformation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_8dp"
+            android:text="@string/this_text_just_to_describe_the_information_of_the_book"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end_in"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_in"
+            app:layout_constraintTop_toBottomOf="@id/bookDetails_tv_bookInformation" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_center_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <View
+            android:layout_width="@dimen/dim_6dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dim_40dp"
+            android:background="@color/colorOrange"
+            app:layout_constraintBottom_toBottomOf="@+id/bookDetails_tv_aboutAuthor"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_in"
+            app:layout_constraintTop_toTopOf="@id/bookDetails_tv_aboutAuthor" />
+
+
+        <TextView
+            android:id="@+id/bookDetails_tv_aboutAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_8dp"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:text="@string/about_author"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_in"
+            app:layout_constraintTop_toBottomOf="@id/guideline_center_in" />
+
+        <TextView
+            android:id="@+id/bookDetails_tv_authorDescribe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_8dp"
+            android:text="@string/this_text_just_to_describe_the_information_of_the_book"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_end_in"
+            app:layout_constraintStart_toEndOf="@+id/guideline_start_in"
+            app:layout_constraintTop_toBottomOf="@id/bookDetails_tv_aboutAuthor" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05" />
+
+    <Button
+        android:id="@+id/bookDetails_btn_placeOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_8dp"
+        android:background="@drawable/shape_button_orange"
+        android:text="@string/place_order"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_out"
+        app:layout_constraintStart_toEndOf="@id/guideline_start_out"
+        app:layout_constraintTop_toBottomOf="@+id/bookDetails_cl_down" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

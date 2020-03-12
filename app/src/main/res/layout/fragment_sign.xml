@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim_16dp">
+
+            <TextView
+                android:id="@+id/signUp_tv_signUpPage"
+                style="@style/ButtonClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_24dp"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/signIn_tv_signInPage"
+                style="@style/ButtonDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_24dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/signUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/signUp_tv_nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/name"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/text_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUp_til_nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:hint="@string/enter_name"
+                android:textColorHint="@color/colorGray2">
+
+                <EditText
+                    android:id="@+id/signUp_et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/text_16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/signUp_tv_mobileText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/mobile"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/text_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUp_til_mobileInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:hint="@string/mobile_number"
+                android:textColorHint="@color/colorGray2">
+
+                <EditText
+                    android:id="@+id/signUp_et_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:inputType="phone"
+                    android:textSize="@dimen/text_16sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/signUp_tv_emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/email"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/text_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUp_til_emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:hint="@string/email"
+                android:textColorHint="@color/colorGray2">
+
+                <EditText
+                    android:id="@+id/signUp_et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/text_16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/signUp_tv_addressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/address"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/text_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUp_til_addressInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:hint="@string/recipient_address"
+                android:textColorHint="@color/colorGray2">
+
+                <EditText
+                    android:id="@+id/signUp_et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:inputType="textPostalAddress"
+                    android:textSize="@dimen/text_16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/signUp_tv_passwordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/password"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/text_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signUp_til_passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:hint="@string/password"
+                android:textColorHint="@color/colorGray2">
+
+                <EditText
+                    android:id="@+id/signUp_et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/text_16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/signUp_btn_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="62dp"
+                android:layout_marginEnd="@dimen/dim_24dp"
+                android:background="@drawable/shape_button_orange"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/signIn_tv_emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/email"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/text_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signIn_til_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:hint="@string/email"
+                android:textColorHint="@color/colorGray2">
+
+                <EditText
+                    android:id="@+id/signIn_et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/text_16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/signIn_tv_passwordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/password"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/text_20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signIn_til_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:hint="@string/password"
+                android:textColorHint="@color/colorGray2">
+
+                <EditText
+                    android:id="@+id/signIn_et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim_24dp"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/text_16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/signIn_btn_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_24dp"
+                android:layout_marginTop="@dimen/dim_400dp"
+                android:layout_marginEnd="@dimen/dim_24dp"
+                android:background="@drawable/shape_button_orange"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_4dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/bookStore_tv_bookStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/book_story"
+                android:layout_marginStart="@dimen/dim_8dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/bookStory_iv_backBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/bookStory_iv_backBar"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/dim_4dp"
+                android:layout_marginTop="@dimen/dim_4dp"
+                android:background="@drawable/back_icon_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/book_cv_details"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/dim_4dp"
+        android:background="@color/colorWhite"
+        app:cardCornerRadius="@dimen/dim_16dp"
+        app:cardElevation="@dimen/dim_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_up">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/text_200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start_inside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+
+            <TextView
+                android:id="@+id/allFeatured_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start_inside"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/allFeatured_author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_4dp"
+                android:gravity="start"
+                android:text=""
+                android:textSize="@dimen/text_14sp"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start_inside"
+                app:layout_constraintTop_toBottomOf="@+id/allFeatured_book_name" />
+
+            <RatingBar
+                android:id="@+id/allFeatured_rb_ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_16dp"
+                android:progressTint="@color/colorOrange"
+                android:rating="4"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start_inside"
+                app:layout_constraintTop_toBottomOf="@+id/allFeatured_author_name" />
+
+            <TextView
+                android:id="@+id/allFeatured_tv_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim_4dp"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline_start_inside"
+                app:layout_constraintTop_toBottomOf="@+id/allFeatured_rb_ratingBar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/book_cv_nameOfBook"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim_8dp"
+        android:layout_marginTop="@dimen/dim_8dp"
+        app:cardCornerRadius="@dimen/dim_16dp"
+        app:cardElevation="@dimen/dim_16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/featured_im_imageView"
+            android:layout_width="@dimen/dim_150dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.35"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent=".06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

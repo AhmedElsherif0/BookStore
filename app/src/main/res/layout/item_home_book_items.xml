@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dim_8dp">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dim_8dp"
+        app:cardCornerRadius="@dimen/dim_16dp"
+        app:cardElevation="@dimen/dim_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/home_iv_bookItems"
+            android:layout_width="@dimen/dim_150dp"
+            android:layout_height="@dimen/dim_250dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/home_tv_bookItemsName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_8dp"
+        android:layout_marginTop="@dimen/dim_8dp"
+        android:text="@string/data_structure_and_algorithms"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_16sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/home_tv_bookItemsPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8dp"
+        android:layout_marginBottom="@dimen/dim_8dp"
+        android:gravity="start"
+        android:text="@string/_15_00"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/home_tv_bookItemsName"
+        app:layout_constraintStart_toStartOf="@+id/home_tv_bookItemsName"
+        app:layout_constraintTop_toBottomOf="@+id/home_tv_bookItemsName" />
+
+    <TextView
+        android:id="@+id/home_tv_bookItemsDiscount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8dp"
+        android:layout_marginBottom="@dimen/dim_8dp"
+        android:gravity="start"
+        android:text="@string/_15_00"
+        android:textColor="@color/colorTitle"
+        android:visibility="gone"
+        android:textSize="@dimen/text_16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/home_tv_bookItemsName"
+        app:layout_constraintStart_toStartOf="@+id/home_tv_bookItemsName"
+        app:layout_constraintTop_toBottomOf="@+id/home_tv_bookItemsName" />
+
+    <TextView
+        android:id="@+id/home_tv_bookItemsFree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8dp"
+        android:layout_marginBottom="@dimen/dim_8dp"
+        android:text="@string/free"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/text_16sp"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/home_tv_bookItemsName"
+        app:layout_constraintStart_toStartOf="@+id/home_tv_bookItemsName"
+        app:layout_constraintTop_toBottomOf="@+id/home_tv_bookItemsName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

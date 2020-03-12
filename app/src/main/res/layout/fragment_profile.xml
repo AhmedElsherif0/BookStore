@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorLightGray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain_cl_constrainUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_16dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/profile_tv_Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_24dp"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:text="@string/profile"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_24sp"
+            android:textAllCaps="false"
+            android:background="@color/colorWhite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/profile_tv_logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_24dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:text="@string/log_out"
+            android:background="@color/colorWhite"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_24sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_middle"
+        app:layout_constraintTop_toBottomOf="@+id/constrain_cl_constrainUp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_cim_image"
+            android:layout_width="@dimen/dim_150dp"
+            android:layout_height="@dimen/dim_150dp"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:src="@drawable/profile_image"
+            app:civ_border_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profile_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:text="@string/john_doe"
+            android:textSize="@dimen/text_24sp"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_cim_image" />
+
+        <TextView
+            android:id="@+id/profile_tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:text="@string/john_doe_gMail_com"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_tv_name" />
+
+        <TextView
+            android:id="@+id/profile_tv_phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:text="@string/_01000942129"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_tv_email" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".55" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

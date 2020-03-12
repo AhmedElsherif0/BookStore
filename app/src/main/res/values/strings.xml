@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Book Store</string>
+    <string name="book_story">Book Store</string>
+    <string name="home">Home</string>
+    <string name="books">Books</string>
+    <string name="profile">Profile</string>
+    <string name="featured">Featured</string>
+    <string name="see_all">See all</string>
+    <string name="data_structure_and_algorithms">Data Structure and Algorithms</string>
+    <string name="_15_00">$15.00</string>
+    <string name="john_doe">John Doe</string>
+    <string name="open">Open</string>
+    <string name="dim_1dp">1dp</string>
+    <string name="place_order">Place Order</string>
+    <string name="book_information">Book Information</string>
+    <string name="this_text_just_to_describe_the_information_of_the_book">This Text Just To Describe The Information of The Book.
+                                This Text Just To Describe The Information of The Book.
+                                This Text Just To Describe The Information of The Book.</string>
+    <string name="about_author">About Author</string>
+    <string name="enter_name">Enter name</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="recipient_address">Recipient address</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="john_doe_gMail_com">john,doe@gmail.com</string>
+    <string name="_01000942129">+2 0100 094 2129</string>
+    <string name="log_out">Log out</string>
+    <string name="free">Free</string>
+
+
+</resources>

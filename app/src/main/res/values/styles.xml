@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorOrange</item>
+        <item name="colorPrimaryDark">@color/colorOrange</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonClicked" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/text_30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonDisable" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/text_16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+</resources>
