@@ -21,13 +21,11 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
+                //FSLKDDFLK
                 Intent i1 = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i1);
                 finish();
             }
         }, Splash_Time);
-
-
     }
 }
